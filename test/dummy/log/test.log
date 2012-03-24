@@ -83,3 +83,8 @@ Processing by ApplicationController#index as HTML
   Rendered application/index.html.slim within layouts/application (7.4ms)
 Completed 200 OK in 33ms (Views: 33.2ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.slim within layouts/application (18.0ms)
+Completed 200 OK in 120ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
