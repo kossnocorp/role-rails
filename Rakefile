@@ -27,7 +27,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = 'koss@nocorp.me'
   gem.authors = ['Sasha Koss']
   gem.rubyforge_project = 'role-rails'
-  gem.version = Role::Rails::VERSION
+  gem.version = RoleRails::VERSION
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -42,7 +42,7 @@ task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = Role::Rails::VERSION
+  version = RoleRails::VERSION
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "role-rails #{version}"

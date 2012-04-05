@@ -1,5 +1,3 @@
-module Role
-  module Rails
-    VERSION = '1.1.0'
-  end
+module RoleRails
+  VERSION = '1.1.0'
 end
