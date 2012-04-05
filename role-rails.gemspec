@@ -4,7 +4,7 @@ require 'role-rails/version'
 
 Gem::Specification.new do |s|
   s.name        = 'role-rails'
-  s.version     = Role::Rails::VERSION
+  s.version     = RoleRails::VERSION
   s.authors     = ['Sasha Koss']
   s.email       = ['koss@nocorp.me']
   s.homepage    = ''
