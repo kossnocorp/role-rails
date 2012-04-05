@@ -1,8 +1,6 @@
 require 'rails'
 require 'role-rails/version'
 
-module Role
-  module Rails
-    require 'role-rails/engine'
-  end
+module RoleRails
+  require 'role-rails/engine'
 end
