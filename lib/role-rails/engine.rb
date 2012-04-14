@@ -3,9 +3,9 @@ require 'rails'
 module RoleRails
   class Engine < ::Rails::Engine
     initializer "role-rails.register" do |app|
-      if defined?(Slim::Engine)
-        Slim::Engine.default_options[:shortcut] ||= {}
-        Slim::Engine.default_options[:shortcut].merge!('@' => 'div role')
+      if defined?(Slim::Parser)
+        shortcut = Slim::Parser.default_options[:shortcut] || {}
+        Slim::Parser.default_options[:shortcut] = shortcut.merge('@' => 'div role')
       end
     end
   end

@@ -2,4 +2,5 @@
 *.log
 .bundle
 Gemfile.lock
+tmp/
 pkg/*
