@@ -1,35 +1,5 @@
-# encoding: utf-8
-
-require 'rubygems'
-require 'bundler'
-
-$:.push File.expand_path('../lib', __FILE__)
-require 'role-rails/version'
-
-
-begin
-  Bundler.setup(:default, :development)
-rescue Bundler::BundlerError => e
-  $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
-  exit e.status_code
-end
-require 'rake'
-
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = 'role-rails'
-  gem.homepage = "https://github.com/kossnocorp/role-rails"
-  gem.license = "MIT"
-  gem.summary = 'jQuery plugin to provide easy way to handle DOM elements by role attribute'
-  gem.description = 'jQuery plugin to provide easy way to handle DOM elements by role attribute'
-  gem.email = 'koss@nocorp.me'
-  gem.authors = ['Sasha Koss']
-  gem.rubyforge_project = 'role-rails'
-  gem.version = RoleRails::VERSION
-end
-Jeweler::RubygemsDotOrgTasks.new
+#!/usr/bin/env rake
+require "bundler/gem_tasks"
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
