@@ -1,4 +1,4 @@
-// Role.js, jQuery adapter v1.1.0 ~ https://github.com/kossnocorp/role
+// Role.js, jQuery adapter v1.0.2 ~ https://github.com/kossnocorp/role
 
 (function($) {
   var matchesSelectorOrigin, type;

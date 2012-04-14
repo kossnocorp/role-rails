@@ -19,3 +19,20 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+namespace :role do
+
+  desc "Pull role/master subtree."
+  task :pull do
+    if !system "git pull -s subtree role master"
+      abort("Have to add role remote `git remote add -f role git@github.com:kossnocorp/role.git`")
+    end
+  end
+
+  desc "Update role assets."
+  task :update => "role:pull" do
+    Dir["vendor/role/lib/*role.js"].each do |f|
+      cp f, "vendor/assets/javascripts/"
+    end
+  end
+end
