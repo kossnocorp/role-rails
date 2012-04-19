@@ -1,7 +1,9 @@
 #!/usr/bin/env rake
-require "bundler/gem_tasks"
-
+require 'bundler/gem_tasks'
 require 'rake/testtask'
+require 'rdoc/task'
+require 'fileutils'
+
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/*_test.rb'
@@ -9,8 +11,6 @@ Rake::TestTask.new(:test) do |test|
 end
 
 task :default => :test
-
-require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = RoleRails::VERSION
 
@@ -22,17 +22,13 @@ end
 
 namespace :role do
 
-  desc "Pull role/master subtree."
+  desc 'Pull role/master subtree.'
   task :pull do
-    if !system "git pull -s subtree role master"
-      abort("Have to add role remote `git remote add -f role git@github.com:kossnocorp/role.git`")
-    end
+    system "cd role ; git checkout v#{RoleRails::VERSION}"
   end
 
-  desc "Update role assets."
-  task :update => "role:pull" do
-    Dir["vendor/role/lib/*role.js"].each do |f|
-      cp f, "vendor/assets/javascripts/"
-    end
+  desc 'Update role assets.'
+  task :update => 'role:pull' do
+    FileUtils.cp_r('role/lib/.', 'vendor/assets/javascripts')
   end
 end

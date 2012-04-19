@@ -1,0 +1,3 @@
+[submodule "role"]
+	path = role
+	url = git://github.com/kossnocorp/role.git
