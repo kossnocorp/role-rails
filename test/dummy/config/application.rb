@@ -2,11 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-require 'coffee-script'
-require 'slim'
-require 'skim'
-require 'role-rails'
-
 Bundler.require
 
 module Dummy
