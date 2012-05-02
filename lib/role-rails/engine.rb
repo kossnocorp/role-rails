@@ -36,7 +36,13 @@ module RoleRails
                 end
                 attributes['class'] += property
               when '#'; attributes['id'] = property
-              when '@'; attributes['role'] = property
+              when '@'
+                if attributes['role']
+                  attributes['role'] += " "
+                else
+                  attributes['role'] = ""
+                end
+                attributes['role'] += property
               end
             end
             attributes
