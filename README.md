@@ -1,15 +1,17 @@
-Role Rails [![Build Status](https://travis-ci.org/razum2um/role-rails.png?branch=master)](https://travis-ci.org/razum2um/role-rails)
-=====
+# Role Rails [![Build Status](https://travis-ci.org/razum2um/role-rails.png?branch=master)](https://travis-ci.org/razum2um/role-rails)
 
-##### Rails adapter for [Role.js](https://github.com/kossnocorp/role)
+Rails adapter for [Role.js](https://github.com/kossnocorp/role)
 
-``` ruby
-# in your views
-@behaviour
+## Usage
+
+In your views:
+
+``` haml
+@behaviour Trololo
 ```
 
 will output
 
 ```
-<div data-role="behaviour"></div>
+<div role="behaviour">Trololo</div>
 ```
