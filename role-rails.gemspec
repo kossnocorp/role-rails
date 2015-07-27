@@ -29,7 +29,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "rails", ">= 3.1.0"
 
-  gem.add_development_dependency "slim", "~> 2.0.0"
+  gem.add_development_dependency "slim", ">= 3.0.0"
   gem.add_development_dependency "skim", "~> 0.9.0"
   gem.add_development_dependency "sqlite3"
   gem.add_development_dependency "shoulda"
